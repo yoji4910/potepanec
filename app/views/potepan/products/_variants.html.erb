@@ -1,0 +1,7 @@
+<span class="quick-drop">
+  <select name="guiest_id3" id="guiest_id3" class="select-drop">
+    <% @product.variants.each do |variant| %>
+      <option value=<%= variant.id %>><%= variant.options_text %></option>
+    <% end %>
+  </select>
+</span>

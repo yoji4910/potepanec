@@ -1,0 +1,111 @@
+1[#<Spree::Variant:0x0000563a013d6d50
+  id: 3,
+  sku: "ROR-001",
+  is_master: true,
+  product_id: 3,
+  
+ 2<Spree::Variant:0x0000563a013d6c10
+  id: 10,
+  sku: "ROR-00001",
+  is_master: false,
+  product_id: 3,
+
+ #<Spree::Variant:0x0000563a013d6ad0
+  id: 11,
+  sku: "ROR-00002",
+  is_master: false,
+  product_id: 3,
+
+ #<Spree::Variant:0x0000563a013d6990
+  id: 12,
+  sku: "ROR-00003",
+  is_master: false,
+  product_id: 3,
+
+ 5<Spree::Variant:0x0000563a013d6850
+  id: 13,
+  sku: "ROR-00004",
+  is_master: false,
+  product_id: 3,
+
+ #<Spree::Variant:0x0000563a013d6710
+  id: 14,
+  sku: "ROR-00005",
+  is_master: false,
+  product_id: 3,
+
+ #<Spree::Variant:0x0000563a013d65d0
+  id: 15,
+  sku: "ROR-00006",
+  is_master: false,
+  product_id: 3,
+
+ #<Spree::Variant:0x0000563a013d6490
+  id: 16,
+  sku: "ROR-00007",
+  is_master: false,
+  product_id: 3,
+
+ #<Spree::Variant:0x0000563a013d6350
+  id: 17,
+  sku: "ROR-00008",
+  is_master: false,
+  product_id: 3,
+
+ 10<Spree::Variant:0x0000563a013d6210
+  id: 18,
+  sku: "ROR-00009",
+  is_master: false,
+  product_id: 3,
+
+ 11<Spree::Variant:0x0000563a013d60d0
+  id: 19,
+  sku: "ROR-00010"
+  is_master: false,
+  product_id: 3,
+
+
+
+
+
+#<Spree::Image id: 24, viewable_id: 3, attachment_file_name: "ror_baseball.jpeg"
+#<Spree::Image id: 25, viewable_id: 3, attachment_file_name: "ror_baseball_back.jpeg"
+#<Spree::Image id: 1, viewable_id: 10, attachment_file_name: "ror_baseball_jersey_red.png" 
+#<Spree::Image id: 2, viewable_id: 10, attachment_file_name: "ror_baseball_jersey_back_red.png" 
+#<Spree::Image id: 3, viewable_id: 11, attachment_file_name: "ror_baseball_jersey_blue.png" 
+#<Spree::Image id: 4, viewable_id: 11, attachment_file_name: "ror_baseball_jersey_back_blue.png" 
+#<Spree::Image id: 5, viewable_id: 12, attachment_file_name: "ror_baseball_jersey_green.png" 
+#<Spree::Image id: 6, viewable_id: 12, attachment_file_name: "ror_baseball_jersey_back_green.png" 
+#<Spree::Image id: 7, viewable_id: 13, attachment_file_name: "ror_baseball_jersey_red.png" 
+#<Spree::Image id: 8, viewable_id: 13, attachment_file_name: "ror_baseball_jersey_back_red.png" 
+#<Spree::Image id: 9, viewable_id: 14, attachment_file_name: "ror_baseball_jersey_blue.png" 
+#<Spree::Image id: 10, viewable_id: 14, attachment_file_name: "ror_baseball_jersey_back_blue.png" 
+#<Spree::Image id: 11, viewable_id: 15, attachment_file_name: "ror_baseball_jersey_green.png"
+#<Spree::Image id: 12, viewable_id: 15, attachment_file_name: "ror_baseball_jersey_back_green.png" 
+#<Spree::Image id: 13, viewable_id: 16, attachment_file_name: "ror_baseball_jersey_red.png"  
+#<Spree::Image id: 14, viewable_id: 16, attachment_file_name: "ror_baseball_jersey_back_red.png"  
+#<Spree::Image id: 15, viewable_id: 17, attachment_file_name: "ror_baseball_jersey_blue.png"  
+#<Spree::Image id: 16, viewable_id: 17, attachment_file_name: "ror_baseball_jersey_back_blue.png" 
+#<Spree::Image id: 17, viewable_id: 18, attachment_file_name: "ror_baseball_jersey_green.png" 
+#<Spree::Image id: 18, viewable_id: 18, attachment_file_name: "ror_baseball_jersey_back_green.png"  
+#<Spree::Image id: 19, viewable_id: 19, attachment_file_name: "ror_baseball_jersey_green.png"  
+#<Spree::Image id: 20, viewable_id: 19, attachment_file_name: "ror_baseball_jersey_back_green.png"
+
+
+
+
+<% option_types.length.times do |i| %>  
+    <span class="quick-drop">
+      <select name="guiest_id<%= i+4 %>" id="guiest_id<%= i+4 %>" class="select-drop">
+        <% option_values[i].each_with_index do |value, n| %>
+          <option value=<%= n %>><%= value %></option>
+        <% end %>
+      </select>
+    </span>
+<% end %>
+
+    # option valueをあるだけ 例)[["S", "M", "L", "XL"], ["Red", "Blue", "Green"]]
+    @option_values = Array.new
+    @option_types.each do |type|
+      @option_values << variants_values(@product.variants.all, type)
+    end

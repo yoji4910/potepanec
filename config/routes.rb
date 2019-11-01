@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'homes/index'
   # This line mounts Solidus's routes at the root of your application.
   # This means, any requests to URLs such as /products, will go to Spree::ProductsController.
   # If you would like to change where this engine is mounted, simply change the :at option to something different.
@@ -7,11 +8,10 @@ Rails.application.routes.draw do
   mount Spree::Core::Engine, at: '/'
 
   namespace :potepan do
-    get '/',                        to: 'sample#index'
-    get 'index',                    to: 'sample#index'
+    get '/',                        to: 'homes#index'
+    get 'index',                    to: 'homes#index'
     get :product_grid_left_sidebar, to: 'sample#product_grid_left_sidebar'
     get :product_list_left_sidebar, to: 'sample#product_list_left_sidebar'
-    get :single_product,            to: 'sample#single_product'
     get :cart_page,                 to: 'sample#cart_page'
     get :checkout_step_1,           to: 'sample#checkout_step_1'
     get :checkout_step_2,           to: 'sample#checkout_step_2'
@@ -24,6 +24,7 @@ Rails.application.routes.draw do
     get :about_us,                  to: 'sample#about_us'
     get :tokushoho,                 to: 'sample#tokushoho'
     get :privacy_policy,            to: 'sample#privacy_policy'
+    resources :products, only: [:show]
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

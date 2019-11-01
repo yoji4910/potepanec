@@ -40,6 +40,7 @@ services:
     depends_on:
       - mysql
       - redis
+      - chrome
     networks:
       - default
     volumes:
@@ -47,7 +48,6 @@ services:
       # https://qiita.com/shotat/items/57d049793605ffc20135
       - /potepanec/log
       - /potepanec/tmp
-      - /potepanec/vendor/bundle
       - vendor_bundle_2_5_1:/potepanec/vendor/bundle
       - vendor_assets_2_7:/potepanec/vendor/assets
       - node_modules:/potepanec/node_modules
@@ -55,3 +55,8 @@ services:
     tty: true
     stdin_open: true
     command: bundle exec rails server
+  # Headless chrome用
+  chrome:
+    image: selenium/standalone-chrome
+    ports:
+      - "4444:4444"
