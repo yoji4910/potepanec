@@ -1,7 +1,7 @@
-<span class="quick-drop">
+<%= form_tag  potepan_product_path(product), method: :get, remote: true do %>
   <select name="guiest_id3" id="guiest_id3" class="select-drop">
-    <% @product.variants.each do |variant| %>
+    <% product.variants.each do |variant| %>
       <option value=<%= variant.id %>><%= variant.options_text %></option>
     <% end %>
   </select>
-</span>
+<% end %>

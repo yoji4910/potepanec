@@ -24,7 +24,7 @@ require 'devise'
 #
 Dir[Rails.root.join('spec', 'support', '**', '*.rb')].each { |f| require f }
 
-Capybara.server_host = Socket.ip_address_list.detect{|addr| addr.ipv4_private?}.ip_address
+Capybara.server_host = Socket.ip_address_list.detect { |addr| addr.ipv4_private? }.ip_address
 Capybara.server_port = 3001
 
 Capybara.register_driver :selenium_remote do |app|
@@ -41,6 +41,9 @@ rescue ActiveRecord::PendingMigrationError => e
   puts e.to_s.strip
   exit 1
 end
+
+require 'spree/testing_support/factories'
+
 RSpec.configure do |config|
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
@@ -78,4 +81,6 @@ RSpec.configure do |config|
     driven_by :selenium_remote
     host! "http://#{Capybara.server_host}:#{Capybara.server_port}"
   end
+
+  config.include FactoryBot::Syntax::Methods
 end

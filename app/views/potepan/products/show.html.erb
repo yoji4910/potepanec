@@ -29,29 +29,11 @@
         <div class="media">
           <div class="media-left productSlider">
             <div id="carousel" class="carousel slide" data-ride="carousel">
-              <div class="carousel-inner">
-                <% @variant.images.each_with_index do |image, i| %>
-                  <% if i == 0 %>
-                    <div class="item active" data-thumb=<%= i %> >
-                      <%= image_tag(image.attachment.url) %>
-                    </div>
-                  <% else %>
-                    <div class="item" data-thumb=<%= i %> >
-                      <%= image_tag(image.attachment.url) %>
-                    </div>
-                  <% end %>
-                <% end %>
-              </div>
+              <%= render partial: 'main_img', locals: { variant: @variant } %>
             </div>
             <div class="clearfix">
               <div id="thumbcarousel" class="carousel slide" data-interval="false">
-                <div class="carousel-inner">
-                  <% @variant.images.each_with_index do |image, i| %>
-                    <div data-target="#carousel" data-slide-to=<%= i %> class="thumb">
-                      <%= image_tag(image.attachment.url) %>
-                    </div>
-                  <% end %>
-                </div>
+                <%= render partial: 'tmbs', locals: { variant: @variant } %>
                 <a class="left carousel-control" href="#thumbcarousel" role="button" data-slide="prev">
                   <span class="glyphicon glyphicon-chevron-left"></span>
                 </a>
@@ -67,13 +49,15 @@
               </li>
               <!-- <li><a href="#"><i class="fa fa-plus" aria-hidden="true"></i>Share This</a></li> -->
             </ul>
-            <h2><%= @product.name %></h2>
+            <h2><%= @variant.name %></h2>
             <h3><%= @variant.display_price %></h3>
-            <p><%= @product.description %></p>
+            <p><%= @variant.description %></p>
             
-            <% if @product.variants.any? %>
-              <%= render partial: 'variants', locals: { variant: @variant } %>
-            <% end %>
+            <span class="quick-drop" id="variants-values">
+              <% if @product.variants.any? %>
+                <%= render partial: 'variants', locals: { product: @product } %>
+              <% end %>
+            </span>
 
             <span class="quick-drop resizeWidth">
               <select name="guiest_id4" id="guiest_id4" class="select-drop" data-remote="true">

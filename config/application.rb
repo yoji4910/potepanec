@@ -29,7 +29,7 @@ module Potepanec
     # the framework and any gems in your application.
 
     config.time_zone = 'Tokyo'
-    config.generators.test_framework = false
+    config.generators.test_framework = :rspec
     config.generators.system_tests   = false
     config.generators.stylesheets    = false
     config.generators.javascripts    = false
