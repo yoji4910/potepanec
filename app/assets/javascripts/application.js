@@ -28,3 +28,9 @@ jQuery(document).bind('ready ajaxComplete', function() {
       $(this).parent().submit();
     });
 });
+
+var selectbox_initialize = function() {
+  $('.select-drop').selectbox();
+};
+jQuery(document).ready(selectbox_initialize);
+jQuery(document).ajaxComplete(selectbox_initialize);
