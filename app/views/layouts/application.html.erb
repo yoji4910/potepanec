@@ -5,15 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><%= yield(:title) + " -" unless :title.nil? %> BIGBAG Store</title>
-
     <%= csrf_meta_tags %>
     <!-- GOOGLE FONT -->
     <%= stylesheet_link_tag "application", 'https://fonts.googleapis.com/css?family=Oxygen:400,300,700', :media => "all" %>
-
     <%= stylesheet_link_tag    'application', media: 'all' %>
-    <%= javascript_include_tag 'application' %>
   </head>
-
   <body>
     <div class="main-wrapper">
       <%= render "layouts/header" %>
@@ -21,10 +17,7 @@
       <%= render "layouts/footer" %>
       <%= render "layouts/login_modal" %>
       <%= render "layouts/signup_modal" %>
-
-      <div class="debug-info">
-        <%= debug(params) if Rails.env.development? %>
-      </div>
     </div>
+    <%= javascript_include_tag 'application' %>
   </body>
 </html>
