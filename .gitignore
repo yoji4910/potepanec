@@ -201,5 +201,5 @@ fabric.properties
 
 /app/views/potepan/sample
 
-# rspec
 .rspec
+/bin/
