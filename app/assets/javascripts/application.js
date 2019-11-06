@@ -23,14 +23,16 @@
 //= require_self
 
 // 商品詳細ページ、セレクトボックス変更時の自動送信
-jQuery(document).bind('ready ajaxComplete', function() {
-  $('.select-drop').change(function() {
-      $(this).parent().submit();
-    });
+jQuery(document).bind("ready ajaxComplete", function() {
+  $(".select-drop").change(function() {
+    $(this)
+      .parent()
+      .submit();
+  });
 });
 
 var selectbox_initialize = function() {
-  $('.select-drop').selectbox();
+  $(".select-drop").selectbox();
 };
 jQuery(document).ready(selectbox_initialize);
 jQuery(document).ajaxComplete(selectbox_initialize);
