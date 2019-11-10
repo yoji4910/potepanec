@@ -1,13 +1,7 @@
 <div class="carousel-inner">
   <% variant.images.each_with_index do |image, i| %>
-    <% if i.zero? %>
-      <div class="item active" data-thumb=<%= i %> >
+      <div class="item <%= "active" if i.zero? %>" data-thumb=<%= i %> >
         <%= image_tag(image.attachment(:large)) %>
       </div>
-    <% else %>
-      <div class="item" data-thumb=<%= i %> >
-        <%= image_tag(image.attachment(:large)) %>
-      </div>
-    <% end %>
   <% end %>
 </div>
