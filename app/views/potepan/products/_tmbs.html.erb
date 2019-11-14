@@ -1,7 +1,0 @@
-<div class="carousel-inner">
-  <% variant.images.each_with_index do |image, i| %>
-    <div data-target="#carousel" data-slide-to=<%= i %> class="thumb">
-      <%= image_tag(image.attachment(:product)) %>
-    </div>
-  <% end %>
-</div>

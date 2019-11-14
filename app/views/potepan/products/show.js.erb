@@ -1,4 +1,4 @@
 $("#variants-values").html("<%= j(render partial: 'variants', locals: { product: @product }) %>");
 $("select#guiest_id3 option[value=<%= @variant.id %>]").attr( 'selected', 'selected');
 $("#carousel").html("<%= j(render partial: 'main_img', locals: { variant: @variant }) %>");
-$("#thumbcarousel").html("<%= j(render partial: 'tmbs', locals: { variant: @variant }) %>");
+$("#thumbcarousel").html("<%= j(render partial: 'thumbs', locals: { variant: @variant }) %>");
