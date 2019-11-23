@@ -4,6 +4,6 @@ class Potepan::CategoriesController < ApplicationController
     @categories = Spree::Taxonomy.includes(:root)
     # 表示する商品を取得
     @taxon = Spree::Taxon.find(params[:id])
-    @products = @taxon.products
+    @products = @taxon.products.includes(master: [:images, :default_price])
   end
 end
