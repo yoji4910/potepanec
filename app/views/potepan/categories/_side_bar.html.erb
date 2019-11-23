@@ -13,8 +13,8 @@
                 <% category.root.leaves.each do |leaf| %>
                   <li>
                     <%= link_to potepan_category_path(leaf.id) do %>
-                      <i class="fa fa-caret-right" aria-hi dden="true"></i><%= leaf.name %>
-                      <span><%= "(#{leaf.products.count})" %></span>
+                      <i class="fa fa-caret-right" aria-hidden="true"></i><%= leaf.name %>
+                      <span class="product_counter"><%= "(#{leaf.products.count})" %></span>
                     <% end %>
                   </li>
                 <% end %>
