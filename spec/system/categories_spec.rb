@@ -48,6 +48,10 @@ RSpec.describe 'カテゴリーページ', type: :system do
         expect(page).to have_content product1.display_price
         expect(page).to have_content product2.display_price
       end
+
+      it "taxon2の商品が表示されない" do
+        expect(page).to have_no_content product3.name
+      end
     end
 
     context 'taxon2のカテゴリページに接続した時' do
@@ -60,9 +64,14 @@ RSpec.describe 'カテゴリーページ', type: :system do
         expect(find('.lightSection .breadcrumb')).to have_content taxon2.name
       end
 
-      it "taxon1の商品が表示される" do
+      it "taxon2の商品が表示される" do
         expect(page).to have_content product3.name
         expect(page).to have_content product3.display_price
+      end
+
+      it "taxon2の商品が表示されない" do
+        expect(page).to have_no_content product1.name
+        expect(page).to have_no_content product2.name
       end
     end
   end
