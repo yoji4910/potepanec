@@ -59,23 +59,14 @@ GEM
       activerecord (>= 3.0)
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
-<<<<<<< HEAD
-    annotate (2.7.4)
-      activerecord (>= 3.2, < 6.0)
-=======
     annotate (2.7.5)
       activerecord (>= 3.2, < 7.0)
->>>>>>> a375c6731a973acdc95e799dd1c78c306b51c5aa
       rake (>= 10.4, < 13.0)
     archive-zip (0.12.0)
       io-like (~> 0.3.0)
     arel (9.0.0)
-<<<<<<< HEAD
     ast (2.4.0)
-    autoprefixer-rails (7.2.6)
-=======
     autoprefixer-rails (9.6.1.1)
->>>>>>> a375c6731a973acdc95e799dd1c78c306b51c5aa
       execjs
     awesome_nested_set (3.2.0)
       activerecord (>= 4.0.0, < 7.0)
@@ -86,13 +77,8 @@ GEM
     builder (3.2.3)
     byebug (11.0.1)
     cancancan (2.3.0)
-<<<<<<< HEAD
-    canonical-rails (0.2.4)
-      rails (>= 4.1, < 5.3)
-=======
     canonical-rails (0.2.6)
       rails (>= 4.1, < 6.1)
->>>>>>> a375c6731a973acdc95e799dd1c78c306b51c5aa
     capybara (3.29.0)
       addressable
       mini_mime (>= 0.1.3)
@@ -101,14 +87,10 @@ GEM
       rack-test (>= 0.6.3)
       regexp_parser (~> 1.5)
       xpath (~> 3.2)
-<<<<<<< HEAD
-    carmen (1.1.1)
-=======
     capybara-screenshot (1.0.23)
       capybara (>= 1.0, < 4)
       launchy
     carmen (1.1.3)
->>>>>>> a375c6731a973acdc95e799dd1c78c306b51c5aa
       activesupport (>= 3.0.0)
     childprocess (3.0.0)
     choice (0.2.0)
@@ -135,19 +117,13 @@ GEM
     devise-encryptable (0.2.0)
       devise (>= 2.1.0)
     diff-lcs (1.3)
-<<<<<<< HEAD
-    discard (1.0.0)
-      activerecord (>= 4.2, < 6)
+    discard (1.1.0)
+      activerecord (>= 4.2, < 7)
     dotenv (2.7.5)
     dotenv-rails (2.7.5)
       dotenv (= 2.7.5)
       railties (>= 3.2, < 6.1)
-    erubi (1.7.1)
-=======
-    discard (1.1.0)
-      activerecord (>= 4.2, < 7)
     erubi (1.8.0)
->>>>>>> a375c6731a973acdc95e799dd1c78c306b51c5aa
     execjs (2.7.0)
     factory_bot (5.0.2)
       activesupport (>= 4.2.0)
@@ -167,13 +143,9 @@ GEM
       tilt (>= 1.2)
     i18n (1.6.0)
       concurrent-ruby (~> 1.0)
-<<<<<<< HEAD
     io-like (0.3.0)
-    jaro_winkler (1.5.3)
-    jbuilder (2.7.0)
-=======
+    jaro_winkler (1.5.4)
     jbuilder (2.9.1)
->>>>>>> a375c6731a973acdc95e799dd1c78c306b51c5aa
       activesupport (>= 4.2.0)
     jquery-rails (4.3.5)
       rails-dom-testing (>= 1, < 3)
@@ -228,21 +200,14 @@ GEM
       mime-types
       mimemagic (~> 0.3.0)
       terrapin (~> 0.6.0)
-<<<<<<< HEAD
-    parallel (1.18.0)
-    paranoia (2.4.1)
-      activerecord (>= 4.0, < 5.3)
-    parser (2.6.5.0)
-      ast (~> 2.4.0)
-    powerpack (0.1.2)
-    pry (0.11.3)
-=======
+    parallel (1.19.1)
     paranoia (2.4.2)
       activerecord (>= 4.0, < 6.1)
+    parser (2.6.5.0)
+      ast (~> 2.4.0)
     polyamorous (2.3.0)
       activerecord (>= 5.0)
     pry (0.12.2)
->>>>>>> a375c6731a973acdc95e799dd1c78c306b51c5aa
       coderay (~> 1.1.0)
       method_source (~> 0.9.0)
     pry-byebug (3.7.0)
@@ -254,13 +219,8 @@ GEM
     pry-rails (0.3.9)
       pry (>= 0.10.4)
     public_suffix (4.0.1)
-<<<<<<< HEAD
-    puma (3.12.0)
-    rack (2.0.5)
-=======
     puma (3.12.1)
     rack (2.0.7)
->>>>>>> a375c6731a973acdc95e799dd1c78c306b51c5aa
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
     rails (5.2.3)
@@ -292,29 +252,15 @@ GEM
       method_source
       rake (>= 0.8.7)
       thor (>= 0.19.0, < 2.0)
-<<<<<<< HEAD
     rainbow (3.0.0)
-    rake (12.3.1)
-    ransack (2.0.1)
-=======
     rake (12.3.3)
     ransack (2.3.0)
->>>>>>> a375c6731a973acdc95e799dd1c78c306b51c5aa
       actionpack (>= 5.0)
       activerecord (>= 5.0)
       activesupport (>= 5.0)
       i18n
       polyamorous (= 2.3.0)
     rb-fsevent (0.10.3)
-<<<<<<< HEAD
-    rb-inotify (0.9.10)
-      ffi (>= 0.5.0, < 2)
-    regexp_parser (1.6.0)
-    responders (2.4.0)
-      actionpack (>= 4.2.0, < 5.3)
-      railties (>= 4.2.0, < 5.3)
-    rspec-core (3.8.0)
-=======
     rb-inotify (0.10.0)
       ffi (~> 1.0)
     regexp_parser (1.6.0)
@@ -322,7 +268,6 @@ GEM
       actionpack (>= 5.0)
       railties (>= 5.0)
     rspec-core (3.8.2)
->>>>>>> a375c6731a973acdc95e799dd1c78c306b51c5aa
       rspec-support (~> 3.8.0)
     rspec-expectations (3.8.4)
       diff-lcs (>= 1.2.0, < 2.0)
@@ -338,32 +283,31 @@ GEM
       rspec-expectations (~> 3.8.0)
       rspec-mocks (~> 3.8.0)
       rspec-support (~> 3.8.0)
-<<<<<<< HEAD
-    rspec-support (3.8.0)
-    rubocop (0.58.2)
+    rspec-support (3.8.2)
+    rubocop (0.76.0)
       jaro_winkler (~> 1.5.1)
       parallel (~> 1.10)
-      parser (>= 2.5, != 2.5.1.1)
-      powerpack (~> 0.1)
+      parser (>= 2.6)
       rainbow (>= 2.2.2, < 4.0)
       ruby-progressbar (~> 1.7)
-      unicode-display_width (~> 1.0, >= 1.0.1)
-    rubocop-airbnb (2.0.0)
-      rubocop (~> 0.58.0)
+      unicode-display_width (>= 1.4.0, < 1.7)
+    rubocop-airbnb (3.0.2)
+      rubocop (~> 0.76.0)
+      rubocop-performance (~> 1.5.0)
+      rubocop-rails (~> 2.3.2)
       rubocop-rspec (~> 1.30.0)
-    rubocop-rspec (1.30.0)
-      rubocop (>= 0.58.0)
-    ruby-graphviz (1.2.3)
+    rubocop-performance (1.5.1)
+      rubocop (>= 0.71.0)
+    rubocop-rails (2.3.2)
+      rack (>= 1.1)
+      rubocop (>= 0.72.0)
+    rubocop-rspec (1.30.1)
+      rubocop (>= 0.60.0)
+    ruby-graphviz (1.2.4)
     ruby-progressbar (1.10.1)
     ruby_dep (1.5.0)
     rubyzip (2.0.0)
-    sass (3.6.0)
-=======
-    rspec-support (3.8.2)
-    ruby-graphviz (1.2.4)
-    ruby_dep (1.5.0)
     sass (3.7.4)
->>>>>>> a375c6731a973acdc95e799dd1c78c306b51c5aa
       sass-listen (~> 4.0.0)
     sass-listen (4.0.0)
       rb-fsevent (~> 0.9, >= 0.9.4)
@@ -374,19 +318,6 @@ GEM
       sprockets (>= 2.8, < 4.0)
       sprockets-rails (>= 2.0, < 4.0)
       tilt (>= 1.1, < 3)
-<<<<<<< HEAD
-    selenium-webdriver (3.142.6)
-      childprocess (>= 0.5, < 4.0)
-      rubyzip (>= 1.2.2)
-    solidus (2.7.0)
-      solidus_api (= 2.7.0)
-      solidus_backend (= 2.7.0)
-      solidus_core (= 2.7.0)
-      solidus_frontend (= 2.7.0)
-      solidus_sample (= 2.7.0)
-    solidus_api (2.7.0)
-      jbuilder (~> 2.6)
-=======
     sassc (2.2.0)
       ffi (~> 1.9)
     sassc-rails (2.1.2)
@@ -395,6 +326,9 @@ GEM
       sprockets (> 3.0)
       sprockets-rails
       tilt
+    selenium-webdriver (3.142.6)
+      childprocess (>= 0.5, < 4.0)
+      rubyzip (>= 1.2.2)
     solidus (2.9.1)
       solidus_api (= 2.9.1)
       solidus_backend (= 2.9.1)
@@ -403,7 +337,6 @@ GEM
       solidus_sample (= 2.9.1)
     solidus_api (2.9.1)
       jbuilder (~> 2.8)
->>>>>>> a375c6731a973acdc95e799dd1c78c306b51c5aa
       kaminari-activerecord (~> 1.1)
       responders
       solidus_core (= 2.9.1)
@@ -454,21 +387,13 @@ GEM
       solidus_api (= 2.9.1)
       solidus_core (= 2.9.1)
       truncate_html (~> 0.9, >= 0.9.2)
-<<<<<<< HEAD
-    solidus_sample (2.7.0)
-      solidus_core (= 2.7.0)
-    solidus_support (0.2.1)
-    spring (2.0.2)
-      activesupport (>= 4.2)
-    spring-commands-rspec (1.0.4)
-      spring (>= 0.9.1)
-=======
     solidus_sample (2.9.1)
       solidus_core (= 2.9.1)
     solidus_support (0.3.2)
       capybara-screenshot
     spring (2.1.0)
->>>>>>> a375c6731a973acdc95e799dd1c78c306b51c5aa
+    spring-commands-rspec (1.0.4)
+      spring (>= 0.9.1)
     spring-watcher-listen (2.0.1)
       listen (>= 2.7, < 4.0)
       spring (>= 1.2, < 3.0)
@@ -496,14 +421,9 @@ GEM
       thread_safe (~> 0.1)
     uglifier (4.1.20)
       execjs (>= 0.3.0, < 3)
-<<<<<<< HEAD
     unicode-display_width (1.6.0)
-    warden (1.2.7)
-      rack (>= 1.0)
-=======
     warden (1.2.8)
       rack (>= 2.0.6)
->>>>>>> a375c6731a973acdc95e799dd1c78c306b51c5aa
     web-console (3.7.0)
       actionview (>= 5.0)
       activemodel (>= 5.0)
@@ -511,17 +431,10 @@ GEM
       railties (>= 5.0)
     websocket-driver (0.7.1)
       websocket-extensions (>= 0.1.0)
-<<<<<<< HEAD
-    websocket-extensions (0.1.3)
-    xpath (3.2.0)
-      nokogiri (~> 1.8)
-    yard (0.9.16)
-=======
     websocket-extensions (0.1.4)
     xpath (3.2.0)
       nokogiri (~> 1.8)
     yard (0.9.20)
->>>>>>> a375c6731a973acdc95e799dd1c78c306b51c5aa
 
 PLATFORMS
   ruby
@@ -547,12 +460,8 @@ DEPENDENCIES
   rspec-rails
   rubocop-airbnb
   sass-rails (~> 5.0)
-<<<<<<< HEAD
   selenium-webdriver
-  solidus (~> 2.7.0)
-=======
   solidus (~> 2.9.0)
->>>>>>> a375c6731a973acdc95e799dd1c78c306b51c5aa
   solidus_auth_devise
   solidus_i18n!
   spring
@@ -566,8 +475,4 @@ RUBY VERSION
    ruby 2.5.1p57
 
 BUNDLED WITH
-<<<<<<< HEAD
-   1.16.6
-=======
    1.17.1
->>>>>>> a375c6731a973acdc95e799dd1c78c306b51c5aa
