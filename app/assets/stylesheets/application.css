@@ -12,11 +12,11 @@
  *
  *= require plugins/jquery-ui/jquery-ui
  *= require plugins/bootstrap/css/bootstrap.min
- *= require plugins/font-awesome/css/font-awesome.min
  *= require plugins/selectbox/select_option1
  *= require plugins/rs-plugin/css/settings
  *= require plugins/owl-carousel/owl.carousel
  *= require css/style
  *= require css/colors/default
+ *= require font-awesome
  *= require_self
  */

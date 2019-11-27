@@ -64,6 +64,10 @@ http://localhost:3000/potepan/index.html
 
 ![](docs/images/installation/first_view.png)
 
+`ActiveRecord::PendingMigrationError` が発生した場合、別タブで以下コマンドを実行して下さい
+
+`docker-compose exec potepanec bundle exec rake db:migrate`
+
 ### 動作停止
 上記（docker-compose up を実行してログが標準出力中のターミナル）で表示した画面を停止し開発を中断するときにはターミナルでctrl+cを押し、更に下記コマンドを実行します
 
