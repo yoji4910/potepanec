@@ -4,5 +4,6 @@ class Potepan::ProductsController < ApplicationController
     @variant = @product.variants.includes(:images).find_by(id: params[:guiest_id3]) ||
                 @product.variants.includes(:images).first ||
                 @product
+    @related_products = @product.related_products
   end
 end
