@@ -15,12 +15,13 @@ RSpec.describe '商品ページ', type: :system do
   let(:taxonomy) { create(:taxonomy, name: 'taxonomy') }
   let(:taxon1) { create(:taxon, name: 'taxon1', taxonomy: taxonomy, parent_id: taxonomy.root.id) }
   let(:taxon2) { create(:taxon, name: 'taxon2', taxonomy: taxonomy, parent_id: taxonomy.root.id) }
-  let(:variant) { create(:variant, is_master: false, product_id: product1.id, price: 100) }
+  let(:variant) { create(:variant, is_master: false, price: 100) }
 
   before do
     product1.taxons << taxon1
     product2.taxons << taxon2
     product3.taxons << taxon1
+    product1.variants << variant
   end
 
   describe 'GET #show' do
