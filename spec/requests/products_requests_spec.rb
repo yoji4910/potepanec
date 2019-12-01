@@ -4,8 +4,8 @@ RSpec.describe "ProductsRequests", type: :request do
   describe "GET #show" do
     let(:taxonomy) { create(:taxonomy, name: 'taxonomy') }
     let(:taxon) { create(:taxon, name: 'taxon', taxonomy: taxonomy, parent_id: taxonomy.root.id) }
-    let(:product) { create(:product, slug: "potepan_product") }
-    let(:related_product) { create(:product, slug: "related_product") }
+    let(:product) { create(:product, name: 'product', slug: "potepan_product") }
+    let(:related_product) { create(:product, name: 'related_product', slug: "related_product") }
 
     before do
       product.taxons << taxon
@@ -24,6 +24,11 @@ RSpec.describe "ProductsRequests", type: :request do
       it "productがセットされている" do
         expect(response.body).to include product.name
         expect(response.body).to include product.display_price.to_s
+      end
+
+      it "関連商品がセットされている" do
+        expect(response.body).to include related_product.name
+        expect(response.body).to include related_product.display_price.to_s
       end
     end
 
