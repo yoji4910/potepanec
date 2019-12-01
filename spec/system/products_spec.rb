@@ -1,9 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe '商品ページ', type: :system do
-  let(:taxonomy) { create(:taxonomy, name: 'taxonomy') }
-  let(:taxon1) { create(:taxon, name: 'taxon1', taxonomy: taxonomy, parent_id: taxonomy.root.id) }
-  let(:taxon2) { create(:taxon, name: 'taxon2', taxonomy: taxonomy, parent_id: taxonomy.root.id) }
   (1..3).each do |i|
     price = i * 100
     let("product#{i}".to_sym) do
@@ -15,6 +12,9 @@ RSpec.describe '商品ページ', type: :system do
       )
     end
   end
+  let(:taxonomy) { create(:taxonomy, name: 'taxonomy') }
+  let(:taxon1) { create(:taxon, name: 'taxon1', taxonomy: taxonomy, parent_id: taxonomy.root.id) }
+  let(:taxon2) { create(:taxon, name: 'taxon2', taxonomy: taxonomy, parent_id: taxonomy.root.id) }
   let(:variant) { create(:variant, is_master: false, product_id: product1.id, price: 100) }
 
   before do
