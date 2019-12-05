@@ -89,13 +89,15 @@ RSpec.describe '商品ページ', type: :system do
 
       it "product_of_taxon1の非関連(taxon2の)商品が表示されない" do
         related_products_of_taxon2.each do |product|
-          expect(page).to have_no_content product.name
+          expect(find('.productsContent')).to have_no_content product.name
         end
       end
 
       it "product_of_taxon1自身が関連商品に表示されない" do
-        expect(all('.productsContent h5')).to have_no_content product_of_taxon1.name
-        expect(all('.productsContent h3')).to have_no_content product_of_taxon1.display_price.to_s
+        within '.productsContent' do
+          expect(page).to have_no_content product_of_taxon1.name
+          expect(page).to have_no_content product_of_taxon1.display_price.to_s
+        end
       end
 
       it "関連商品に期待されるリンクがセットされている" do
@@ -116,13 +118,15 @@ RSpec.describe '商品ページ', type: :system do
 
       it "product_of_taxon2の非関連(taxon1の)商品が表示されない" do
         related_products_of_taxon1.each do |product|
-          expect(page).to have_no_content product.name
+          expect(find('.productsContent')).to have_no_content product.name
         end
       end
 
       it "product_of_taxon2自身が関連商品に表示されない" do
-        expect(all('.productsContent h5')).to have_no_content product_of_taxon2.name
-        expect(all('.productsContent h3')).to have_no_content product_of_taxon2.display_price.to_s
+        within '.productsContent' do
+          expect(page).to have_no_content product_of_taxon2.name
+          expect(page).to have_no_content product_of_taxon2.display_price.to_s
+        end
       end
 
       it "関連商品に期待されるリンクがセットされている" do

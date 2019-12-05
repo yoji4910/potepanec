@@ -13,4 +13,3 @@ AllCops:
     - 'lib/tasks/*'
     - 'vendor/**/*'
     - 'path/ruby'
-    - 'app/models/potepan/product_decorator.rb'
