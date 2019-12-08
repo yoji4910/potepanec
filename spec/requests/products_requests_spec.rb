@@ -2,15 +2,10 @@ require 'rails_helper'
 
 RSpec.describe "ProductsRequests", type: :request do
   describe "GET #show" do
-    let(:taxonomy) { create(:taxonomy, name: 'taxonomy') }
-    let(:taxon) { create(:taxon, name: 'taxon', taxonomy: taxonomy, parent_id: taxonomy.root.id) }
-    let(:product) { create(:product, name: 'product', slug: "potepan_product") }
-    let(:related_product) { create(:product, name: 'related_product', slug: "related_product") }
-
-    before do
-      product.taxons << taxon
-      related_product.taxons << taxon
-    end
+    let(:taxonomy) { create(:taxonomy) }
+    let(:taxon) { create(:taxon, taxonomy: taxonomy) }
+    let!(:product) { create(:product, slug: "potepan_product", taxons: [taxon]) }
+    let!(:related_product) { create(:product, slug: "related_product", taxons: [taxon]) }
 
     context "HTTPで接続した時" do
       before do
