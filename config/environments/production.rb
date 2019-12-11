@@ -83,6 +83,18 @@ Rails.application.configure do
   # require 'syslog/logger'
   # config.logger = ActiveSupport::TaggedLogging.new(Syslog::Logger.new 'app-name')
 
+  config.paperclip_defaults = {
+    storage: :s3,
+    preserve_files: true,
+    s3_host_name: 's3-ap-northeast-1.amazonaws.com',
+    s3_credentials: {
+      access_key_id: ENV['AWS_ACCESS_KEY_ID'],
+      secret_access_key: ENV['AWS_SECRET_ACCESS_KEY'],
+      s3_region: 'ap-northeast-1'
+    },
+    bucket: 'potepanec'
+  }
+
   if ENV["RAILS_LOG_TO_STDOUT"].present?
     logger           = ActiveSupport::Logger.new(STDOUT)
     logger.formatter = config.log_formatter
